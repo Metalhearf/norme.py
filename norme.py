@@ -254,24 +254,6 @@ class norme:
                             self.nb_line = self.nb_line + 1
                             fd.close()
 
-    def get_user(self):
-        try:
-            fd = open(sys.argv[1] + 'auteur')
-        except IOError:
-            user = os.getenv('USER')
-            self.user.append(user)
-            self.user.append(pwd.getpwnam(user)[4]) #Recuperation du nom complet de l'utilisateur
-        else:
-            buffer = fd.read()
-            fd.close()
-            p = re.compile('([\w]*)')
-            test = re.findall(p, buffer)
-            for user in test:
-                if user:
-                    self.user.append(user)
-                    self.user.append(pwd.getpwnam(user)[4])
-
-
 def check_makefile(thedir):
     file = thedir + "Makefile"
     if os.path.isfile(file):
