@@ -1,11 +1,7 @@
 #!/usr/pkg/bin/python2.3
-#
-# Make by duponc_j@epitech.net
-# Version: 1.2.1
-#
 
 '''
-An Epitech norme checker
+C standard checker
 
 Usage: python norme.py <dir to scan> [-nocheat] [-verbose] [-score] [-libc]
 
@@ -23,9 +19,6 @@ Non geree:
 - +<escape>
 - verification de la presence de gl_
 
-Bug:
-Il est arrivee que le checker ne trouve aucune faute alors qu\'il en existe, si
-ce bug vous arrive maillez moi.
 '''
 
 import sys,re,os,pwd
